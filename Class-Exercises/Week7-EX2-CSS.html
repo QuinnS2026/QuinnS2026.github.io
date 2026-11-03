@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bangkok - Week 7 CSS Practice</title>
+
+<style>
+/* Background and Font */
+body {
+    background-color: #f3f8fc;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+/* ID Selectors - Change Colours */
+#page-title {
+    color: #145d90;
+    text-align: center;
+    font-size: 2rem;
+}
+
+h2 {
+    padding: 8px;
+    margin-top: 25px;
+}
+
+#about {
+    color: blue;
+    background-color: #e4f1fa;
+}
+
+#attractions {
+    color: green;
+    background-color: #e6f5ef;
+}
+
+#activities {
+    color: green;
+    background-color: #e6f5ef;
+}
+
+#useful-links {
+    color: blue;
+    background-color: #e4f1fa;
+}
+
+#gallery {
+    color: purple;
+    background-color: #f2eaf7;
+}
+
+#prices-heading {
+    color: blue;
+    background-color: #e4f1fa;
+}
+
+#guide {
+    color: purple;
+    background-color: #f2eaf7;
+}
+
+#visit {
+    color: darkgreen;
+    background-color: #e6f5ef;
+}
+
+/* Photo and Video */
+.media-box {
+    display: inline-block;
+    vertical-align: top;
+    width: 400px;
+    max-width: 100%;
+    margin: 5px;
+}
+
+.media-box img,
+.media-box iframe {
+    width: 100%;
+    height: 225px;
+}
+
+/* Photo Gallery */
+.photo-gallery img {
+    width: 300px;
+    height: 200px;
+    max-width: 100%;
+    margin: 5px;
+}
+
+/* Links */
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* Table */
+#price-table {
+    border-collapse: collapse;
+    background-color: white;
+}
+
+#price-table th,
+#price-table td {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+#price-table th {
+    background-color: lightblue;
+}
+
+/* Form */
+#plan-form {
+    background-color: white;
+    border: 1px solid gray;
+    padding: 15px;
+    max-width: 600px;
+}
+
+input, select {
+    padding: 5px;
+}
+
+button {
+    background-color: green;
+    color: white;
+    padding: 8px;
+}
+
+/* Small Screens */
+@media (max-width: 576px) {
+    .media-box {
+        width: 100%;
+    }
+
+    .photo-gallery img {
+        width: 95%;
+        height: auto;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 id="page-title">Welcome to Bangkok</h1>
+
+<!-- Photo and Video -->
+<div class="media-box">
+<img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&amp;h=450&amp;fit=crop"
+alt="Bangkok city" width="400" height="225">
+</div>
+
+<div class="media-box">
+<iframe width="400" height="225"
+src="https://www.youtube.com/embed/9T8S_eDX8SE"
+title="Bangkok Video" allowfullscreen></iframe>
+</div>
+
+<h2 id="about">About the City</h2>
+<p><strong>Bangkok</strong> is the capital of Thailand.
+It is famous for temples, markets, and delicious food.</p>
+<p>Bangkok is an <em>exciting place to explore</em>.
+I enjoy its culture and beautiful temples.</p>
+
+<hr>
+
+<!-- Lists -->
+<h2 id="attractions">Top Attractions</h2>
+<ul>
+<li>Grand Palace</li>
+<li>Wat Arun</li>
+<li>Wat Pho</li>
+<li>Chatuchak Market</li>
+<li>Lumphini Park</li>
+</ul>
+
+<h2 id="activities">Things to Do</h2>
+<ol>
+<li>Visit temples</li>
+<li>Eat Thai food</li>
+<li>Take a boat ride</li>
+<li>Go shopping</li>
+<li>Visit night markets</li>
+</ol>
+
+<hr>
+
+<!-- Links -->
+<h2 id="useful-links">Useful Links</h2>
+
+<p><a href="https://www.tourismthailand.org">
+Tourism information</a></p>
+
+<p><a href="https://www.tourismthailand.org"
+target="_blank">
+Open tourism site in a new tab</a></p>
+
+<p><a href="#gallery">Jump to the photo gallery</a></p>
+
+<!-- Images -->
+<h2 id="gallery">Photo Gallery</h2>
+
+<div class="photo-gallery">
+<img src="https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=600&amp;h=400&amp;fit=crop"
+alt="Bangkok temple">
+
+<img src="https://images.unsplash.com/photo-1755251042986-91270ffd76f5?w=600&amp;h=400&amp;fit=crop"
+alt="Wat Arun">
+
+<br>
+
+<img src="https://images.unsplash.com/photo-1668589345920-26ebf7facbfc?w=600&amp;h=400&amp;fit=crop"
+alt="Bangkok market">
+
+<img src="https://images.unsplash.com/photo-1750635409983-78ca6a8cf324?w=600&amp;h=400&amp;fit=crop"
+alt="Bangkok at night">
+</div>
+
+<hr>
+
+<!-- Table -->
+<h2 id="prices-heading">Attraction Prices</h2>
+
+<table id="price-table">
+<tr>
+<th>Attraction</th>
+<th>Location</th>
+<th>Admission</th>
+</tr>
+<tr>
+<td>Grand Palace</td>
+<td>Phra Nakhon</td>
+<td>500 THB</td>
+</tr>
+<tr>
+<td>Chatuchak Market</td>
+<td>Chatuchak</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>Lumphini Park</td>
+<td>Pathum Wan</td>
+<td>Free</td>
+</tr>
+</table>
+
+<hr>
+
+<!-- PDF -->
+<h2 id="guide">Bangkok Travel Guide PDF</h2>
+
+<iframe width="400" height="300"
+src="https://api.tat.or.th/upload/live/multimedia/9228/E_Bangkok.pdf"
+title="Bangkok Guide"></iframe>
+
+<p><a href="https://api.tat.or.th/upload/live/multimedia/9228/E_Bangkok.pdf">
+Open Bangkok PDF</a></p>
+
+<hr>
+
+<!-- Form -->
+<h2 id="visit">Plan Your Visit</h2>
+
+<form id="plan-form" method="get">
+
+<label for="name">Your name:</label>
+<input type="text" id="name" name="name" required>
+
+<p><label for="email">Email:</label>
+<input type="email" id="email" name="email"></p>
+
+<label for="season">Preferred season:</label>
+<select id="season" name="season">
+<option value="cool">Cool season</option>
+<option value="hot">Hot season</option>
+<option value="rainy">Rainy season</option>
+</select>
+
+<p>Travel with:</p>
+<input type="radio" id="family" name="travel" value="family">
+<label for="family">Family</label>
+
+<input type="radio" id="friends" name="travel" value="friends">
+<label for="friends">Friends</label>
+
+<p>Interests:</p>
+<input type="checkbox" id="food" name="interests" value="food">
+<label for="food">Food</label>
+
+<input type="checkbox" id="temples" name="interests" value="temples">
+<label for="temples">Temples</label>
+
+<p>
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+</p>
+
+</form>
+
+<p>Thanks for visiting this page!</p>
+
+</body>
+</html>
